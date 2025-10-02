@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jogo de Adivinhação</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="game.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Jogo de Adivinhação</h1>
+
+    <p class="intro">
+      Tente adivinhar o número secreto entre <strong>1</strong> e <strong>100</strong>.
+      Você tem <span id="maxAttemptsDisplay">10</span> tentativas. Boa sorte!
+    </p>
+
+    <div class="game-area">
+      <label for="guessInput">Seu palpite:</label>
+      <input id="guessInput" type="number" min="1" max="100" placeholder="Digite um número (1-100)" />
+
+      <button id="guessBtn">Chutar</button>
+      <button id="resetBtn" class="secondary" hidden>Reiniciar</button>
+    </div>
+
+    <p id="message" class="message" aria-live="polite"></p>
+    <p id="attempts" class="attempts">Tentativas restantes: <span id="attemptsLeft"></span></p>
+  </main>
+</body>
+</html>
+
